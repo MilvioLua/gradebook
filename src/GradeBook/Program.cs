@@ -24,20 +24,21 @@ namespace GradeBook
                 {
                     var grade = double.Parse(input);
                     book.AddGrade(grade);
+                    book.AddGrade('A');
                 }
                 catch (ArgumentException ex)
                 {
                     Console.WriteLine("Caught an expception");
                     throw;
                 }
-                 catch (FormatException ex)
+                catch (FormatException ex)
                 {
                     Console.WriteLine("Caught an expception");
                     throw;
                 }
                 finally
                 {
-                   Console.WriteLine("*******");
+                    Console.WriteLine("*******");
                 }
 
             }
