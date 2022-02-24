@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Anonymous\\gradebook\\src\\gradebook\\gradebook.csproj": {}
+    "C:\\Users\\Anonymous\\gradebook\\src\\GradeBook\\GradeBook.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Anonymous\\gradebook\\src\\gradebook\\gradebook.csproj": {
+    "C:\\Users\\Anonymous\\gradebook\\src\\GradeBook\\GradeBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Anonymous\\gradebook\\src\\gradebook\\gradebook.csproj",
-        "projectName": "gradebook",
-        "projectPath": "C:\\Users\\Anonymous\\gradebook\\src\\gradebook\\gradebook.csproj",
+        "projectUniqueName": "C:\\Users\\Anonymous\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+        "projectName": "GradeBook",
+        "projectPath": "C:\\Users\\Anonymous\\gradebook\\src\\GradeBook\\GradeBook.csproj",
         "packagesPath": "C:\\Users\\Anonymous\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Anonymous\\gradebook\\src\\gradebook\\obj\\",
+        "outputPath": "C:\\Users\\Anonymous\\gradebook\\src\\GradeBook\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Anonymous\\AppData\\Roaming\\NuGet\\NuGet.Config",

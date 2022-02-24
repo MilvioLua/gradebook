@@ -6,5 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = gradebook
-build_property.ProjectDir = C:\Users\Anonymous\gradebook\src\gradebook\
+build_property.RootNamespace = GradeBook
+build_property.ProjectDir = C:\Users\Anonymous\gradebook\src\GradeBook\
