@@ -1,9 +1,49 @@
 namespace GradeBook
 {
-    public class Book
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
+    public class NamedObject
+    {
+        public NamedObject(string name)
+        {
+            Name = name;
+        }
+
+        public string Name
+        {
+            get;
+            set;
+        }
+    }
+
+    public interface Ibook
+    {
+        void AddGrade(double grade);
+        Statistics GetStatistics();
+        string Name { get;}
+        event GradeAddedDelegate GradeAdded;
+    }
+
+    public abstract class Book : NamedObject, Ibook
+    {
+        protected Book(string name) : base(name)
+        {
+        }
+
+        public virtual event GradeAddedDelegate GradeAdded;
+
+        public abstract void AddGrade(double grade);
+
+        public virtual Statistics GetStatistics()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class InmemoryBook : Book
     {
 
-        public Book(string name)
+        public InmemoryBook(string name) : base(name)
         {
             Name = name;
             grades = new List<double>();
@@ -31,11 +71,14 @@ namespace GradeBook
             }
         }
 
-        public void AddGrade(double grade)
+        public override void AddGrade(double grade)
         {
             if (grade <= 100 && grade >= 0)
             {
                 grades.Add(grade);
+                //  if (GradeAdded != null){
+                //     GradeAdded(this, new EventArgs());
+                //  }
             }
             else
             {
@@ -43,7 +86,9 @@ namespace GradeBook
             }
         }
 
-        public Statistics GetStatistic()
+       public override event GradeAddedDelegate GradeAdded;
+
+        public override Statistics GetStatistic()
         {
             var result = new Statistics();
             result.Average = 0.0;
@@ -86,10 +131,5 @@ namespace GradeBook
         }
 
         List<double> grades = new List<double>();
-        public string Name
-        {
-            get; set;
-        }
-
     }
 }
